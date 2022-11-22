@@ -29,6 +29,7 @@ import { MatCardModule } from '@angular/material/card';
 import { NavComponent } from './components/nav/nav.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
 
 // Componentes do projeto
 
@@ -39,6 +40,7 @@ import { HomeComponent } from './components/home/home.component';
     NavComponent,
     HeaderComponent,
     HomeComponent,
+    TecnicoListComponent,
   ],
   imports: [
     BrowserModule,
