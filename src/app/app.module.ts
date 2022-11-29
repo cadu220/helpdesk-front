@@ -76,8 +76,8 @@ import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecn
       timeOut: 4000,
       closeButton: true,
       progressBar: true
-    })
-  
+    }),
+
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
