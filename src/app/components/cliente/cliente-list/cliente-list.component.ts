@@ -17,13 +17,15 @@ export class ClienteListComponent implements OnInit {
  
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','acoes']
   dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA)
+  
+  @ViewChild(MatPaginator) paginator: MatPaginator
+  
   constructor(private service: ClienteService) {}
 
   ngOnInit(): void {
     this.findAll()
   }
 
-  @ViewChild(MatPaginator) paginator: MatPaginator
 
   
 
