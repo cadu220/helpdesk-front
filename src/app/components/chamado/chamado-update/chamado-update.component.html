@@ -17,7 +17,7 @@
 
       <div class="status-prioridade">
         <mat-form-field appearance="outline">
-            <mat-label>selecione um status</mat-label>
+            <mat-label>{{retornaStatus(chamado.status)}}</mat-label>
             <mat-select 
             [(ngModel)]="chamado.status"
           name="status"
@@ -30,7 +30,7 @@
           </mat-form-field>
 
           <mat-form-field appearance="outline">
-            <mat-label>selecione uma prioridade</mat-label>
+            <mat-label>{{retornaPrioridade(chamado.prioridade)}}</mat-label>
             
             <mat-select 
             [(ngModel)]="chamado.prioridade"
@@ -47,7 +47,7 @@
 
       <div class="tecnico">
         <mat-form-field  class="full-width" appearance="outline">
-            <mat-label>selecione um técnico</mat-label>
+            <mat-label>{{chamado.nomeTecnico}}</mat-label>
             <mat-select 
             [(ngModel)]="chamado.tecnico"
           name="tecnico"
@@ -59,7 +59,7 @@
 
           <div class="cliente">
             <mat-form-field  class="full-width" appearance="outline">
-                <mat-label>selecione um cliente</mat-label>
+                <mat-label>{{chamado.nomeCliente}}</mat-label>
                 <mat-select 
                 [(ngModel)]="chamado.cliente"
           name="cliente"
@@ -83,7 +83,7 @@
         </mat-form-field>
       </form>
 
-      <button (click)="create()" [disabled]="!validaCampos()" class="full-width mat-elevation-z4 " mat-raised-button color="primary">Atualizar chamado</button>
+      <button (click)="update()" [disabled]="!validaCampos()" class="full-width mat-elevation-z4 " mat-raised-button color="primary">Atualizar chamado</button>
       <button routerLink="../" class="full-width mat-elevation-z4" mat-stroked-button color="warn">cancelar</button>
 
 
